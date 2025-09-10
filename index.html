@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tetris (HTML/JS)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>TETRIS</h1>
+      <div class="meta">
+        <div>Score: <span id="score">0</span></div>
+        <div>Level: <span id="level">1</span></div>
+        <div>Lines: <span id="lines">0</span></div>
+      </div>
+    </header>
+
+    <main>
+      <div class="playfield">
+        <canvas id="board" width="300" height="600" aria-label="Tetris board"></canvas>
+        <div class="overlay" id="overlay">
+          <div id="overlayText">Press Enter to Start</div>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <section class="panel">
+          <h2>Next</h2>
+          <canvas id="next" width="120" height="300"></canvas>
+        </section>
+        <section class="panel">
+          <h2>Hold</h2>
+          <canvas id="hold" width="120" height="120"></canvas>
+        </section>
+        <section class="panel small">
+          <h2>Controls</h2>
+          <ul>
+            <li>&larr;/&rarr;: Move</li>
+            <li>&darr;: Soft drop</li>
+            <li>Space: Hard drop</li>
+            <li>Z / X / &uarr;: Rotate</li>
+            <li>C: Hold</li>
+            <li>P: Pause</li>
+            <li>R: Restart</li>
+            <li>Enter: Start</li>
+          </ul>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      <small>Built for the web — close to classic Tetris rules (bag randomizer, SRS kicks, level speed-up).</small>
+    </footer>
+  </div>
+  <script src="tetris.js"></script>
+</body>
+</html>
